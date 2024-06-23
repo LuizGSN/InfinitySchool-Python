@@ -1,0 +1,86 @@
+def verificar_aprovacao(*notas):
+    if len(notas) < 2:
+        return "Passe pelo menos duas notas."
+    else:
+        soma_total = 0
+        for nota_atual in notas:
+            soma_total += nota_atual
+        # soma_total = sum(notas) FORMA ALTERNATIVA USANDO RECURSOS.
+        media = soma_total / len(notas)
+        if media >= 7:
+            return f"Aprovado com a média {media:.1f}"
+        else:
+            return f"Reprovado com a média {media:.1f}"
+
+
+print(verificar_aprovacao(6,4,8,10,7))
+print(verificar_aprovacao(2,4,8))
+
+
+
+
+atividade = {
+    "nome": "Caminhada",
+    "descricao": "Ir até a ponte e voltar",
+    "prioridade": 2,
+    "categoria": "fit",
+    "concluido": False
+}
+
+
+
+lista_de_tarefas = []
+
+def adicionar_tarefa():
+    nome_da_tarefa = str(input("Digite o nome da tarefa: "))
+    descricao_da_tarefa = str(input("Digite a descrição da tarefa: "))
+    prioridade_da_tarefa = int(input("Digite a prioridade da tarefa: "))
+    categoria_da_tarefa = str(input("Digite a categoria da tarefa: "))
+
+    tarefa_criada = {
+        "Nome": nome_da_tarefa,
+        "Descrição": descricao_da_tarefa,
+        "Prioridade": prioridade_da_tarefa,
+        "Categoria": categoria_da_tarefa,
+        "Concluído": False
+    }
+    lista_de_tarefas.append(tarefa_criada)
+    return "Tarefa criada com sucesso"
+
+def listar_tarefas():
+    print(lista_de_tarefas)
+
+def marcar_tarefa():
+    pass
+
+def exibir_prioridade():
+    pass
+
+def exibir_categoria():
+    pass
+
+while True:
+    menu = int(input("""
+    1 - Adicionar Tarefa
+    2 - Listar Tarefas
+    3 - Marcar Tarefa como concluída
+    4 - Exibir tarefas por prioridade
+    5 - Exibir tarefas por categoria
+    0 - Sair                     
+"""))
+    match menu:
+        case 1:
+            adicionar_tarefa()
+        case 2:
+            listar_tarefas()
+        case 3:
+            marcar_tarefa()
+        case 4:
+            exibir_prioridade()
+        case 5:
+            exibir_categoria()
+        case 0:
+            print("Fim do programa")
+            break
+        case _:
+            print("Opção inválida")
