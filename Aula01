@@ -1,0 +1,83 @@
+ATIVIDADE 1
+nome = "Abel"
+idade = 28
+
+
+# print("Meu nome é Abel e eu tenho 28 anos")
+# print(nome, idade)
+# print("Meu nome é ", nome, " e eu tenho ", idade, "anos")
+print(f"Meu nome é {nome} e eu tenho {idade} anos")
+
+ATIVIDADE 2
+lado = float(input("Digite o lado do quadrado: "))
+
+area = lado * lado
+
+print(f"A área do quadrado é {area}m")
+
+
+ATIVIDADE 3
+celsius = float(input("Digite a temperatura em Celsius: "))
+
+f = celsius * 1.8 + 32
+
+print(f"A temperatura em Celsius {celsius}° convertido para Fahrenheit fica {f}°")
+
+
+ATIVIDADE 5
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+
+if n1 > n2:
+    print(f"O {n1} é o maior")
+    print(f"O {n2} é o menor")
+elif n2 > n1:
+    print(f"O {n2} é o maior")
+    print(f"O {n1} é o menor")
+else:
+    print("Os números são iguais")
+
+
+DESAFIO 1 MÉDIA
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+nota3 = float(input("Digite a terceira nota: "))
+
+media = (nota1 + nota2 + nota3) / 3
+
+if media >= 7:
+    print(f"Aprovado com a média {media:.2f}")
+else:
+    print(f"Reprovado com a média {media:.2f}")
+
+LOOP FOR
+for i in range(20):
+    print(i)
+
+
+for i in range(15,21):
+    print(i)
+
+
+for i in range(1,21,2):
+    print(i)
+
+
+nome = "abelardo"
+
+for o_que_voce_quiser in nome:
+    if o_que_voce_quiser == "a":
+        print("Achei um A")
+
+=================================================================================================
+
+nome = "Abelardo"
+contador = 0
+
+
+for letra_da_vez in nome.lower():
+    if letra_da_vez == "a" or letra_da_vez == "e" or letra_da_vez == "i" or letra_da_vez == "o" or letra_da_vez == "u":
+        contador += 1
+       
+    
+print(f"O nome {nome} tem {contador} vogais")
