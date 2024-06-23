@@ -1,0 +1,92 @@
+while True:
+    menu = int(input("""
+        Escolha uma opção
+        1 - Adicionar algo
+        2 - Remover algo
+        0 - Sair
+"""))
+    if menu == 1:
+        print("Adicionei algo")
+    elif menu == 2:
+        print("Removi algo")
+    elif menu == 0:
+        break
+    else:
+        print("Opção inválida")
+
+
+lista_de_notas = [9.7,5.2,7,6.5]
+lista_de_idades = [28,35,51,18,14,10]
+lista_de_frutas = ["Maça", "Banana", "Uva"]
+lista_pessoa = ["João", 29, 1.82, True]
+
+
+print(lista_de_frutas[len(lista_de_frutas) -1])
+print(len(lista_de_frutas))
+
+
+
+
+lista_de_notas = [9.7,5.2,7,6.5]
+lista_de_idades = [28,35,51,18,14,10]
+lista_de_frutas = ["Maça", "Banana", "Uva"]
+lista_pessoa = ["João", 29, 1.82, True, [6,8,15], "Maria"]
+
+
+
+print(lista_pessoa[4][1])
+
+
+lista_vogais = ["a", "e", "i", "o", "u"]
+
+for vogal in lista_vogais:
+    print(vogal)
+
+
+lista_de_frutas = ["Maça", "Melancia", "Abacaxi"]
+
+for i in range(5):
+    nova_fruta = str(input("Digite o nome de uma fruta: "))
+    lista_de_frutas.append(nova_fruta)
+
+print(lista_de_frutas)
+
+
+lista_de_frutas = ["Maça", "Melancia", "Abacaxi"]
+
+lista_dos_excluidos = []
+
+item_excluido = lista_de_frutas.pop(1)
+lista_dos_excluidos.append(item_excluido)
+
+
+print(lista_de_frutas)
+
+print(f"O item removido foi o {item_excluido}")
+
+
+palestrantes = (
+    ["João", "Python", "Infinity"],
+    ["Maria", "Javascript", "Escola X"],
+    ["José", "HTML", "Infinity"]
+)
+
+print(palestrantes[2])
+
+# for informacao in palestrantes[2]:
+#     print(informacao)
+
+
+
+atividade extra:
+frutas = (
+    ["Banana", 50, 1.99],
+    ["Laranja", 230, 3.50],
+    ["Uva", 1600, 0.25]
+)
+soma_total = 0
+
+for fruta in frutas:
+    soma_total += fruta[2]
+
+print(soma_total)
