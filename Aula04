@@ -1,0 +1,375 @@
+list()
+lista = ["João", 25, 1.5, True, [1,2,3], "Oi"]
+
+tuple()
+tupla = ("João", 25, 1.5, True, [1,2,3], "Oi")
+
+set()
+conjunto = {"João", 25, 1.5, True, [1,2,3], "Oi"}
+
+dict()
+dicionario = {
+    "Nome": "João",
+    "Idade": 25,
+    "Altura": 1.5,
+    "Casado": True,
+    "Notas": [1,2,3],
+    "Palavra_favorita": "Oi"
+    }
+
+
+VARRENDO TODOS OS ITENS DE UM DICIONÁRIO
+
+for item in dicionario.items():
+    print(item)
+
+
+for chave,valor in dicionario.items():
+    print(chave)
+    print(valor)
+
+
+
+
+
+FORMAS DE DECLARAR DICIONARIO
+
+dicionario = {
+    "Nome": "João",
+    "Idade": 25,
+    "Altura": 1.5,
+    "Casado": True,
+    "Notas": [1,2,3],
+    "Palavra_favorita": "Oi"
+}
+
+dicionario2 = dict(
+    [
+        ("Nome", "João"),
+        ("Idade", 25),
+        ("Altura", 1.5)
+    ]
+)
+
+
+diciarionario3 = dict(
+    Nome = "João",
+    Idade = 25,
+    Altura = 1.5
+)
+
+
+
+
+
+FORMAS DE BUSCAR UM ITEM NO DICIONÁRIO:
+dicionario = {
+    "Nome": "João",
+    "Idade": 25,
+    "Altura": 1.5,
+    "Casado": True,
+    "Notas": [1,2,3],
+    "Palavra_favorita": "Oi"
+}
+
+print(dicionario["Nome"])
+print(dicionario.get("Nome"))
+print(dicionario.get("Profissão", "Chave não encontrada"))
+
+
+
+
+
+ATIVIDADE 1
+ABORDAGEM NÃO UTILIZADA
+pessoas = {
+    "Nome1": "João",
+    "Idade1": 30,
+    "Nome2": "Ana",
+    "Idade2": 29,
+    "Nome3": "Pedro",
+    "Idade3": 15
+}
+
+for chave, valor in pessoas.items():
+    print(valor)
+
+
+
+ATIVIDADE 2
+pessoas = [
+    {"Nome": "João","Idade": 30},
+    {"Nome": "Ana","Idade": 27},
+    {"Nome": "Antônio","Idade": 50},
+    {"Nome": "Pedro","Idade": 18}
+]
+
+maior_idade = 0
+nome_do_mais_velho = ""
+
+for item in pessoas:
+    if(item["Idade"] > maior_idade):
+        nome_do_mais_velho = item["Nome"]
+        maior_idade = item["Idade"]
+    
+
+print(f"O mais velho é o {nome_do_mais_velho} com {maior_idade} anos")
+
+
+
+
+
+REATRIBUINDO E CRIANDO UM NOVO CAMPO
+dicionario = {
+    "Nome": "João",
+    "Idade": 25,
+    "Altura": 1.5,
+    "Casado": True,
+    "Notas": [1,2,3],
+    "Palavra_favorita": "Oi"
+}
+
+
+dicionario["Altura"] = 1.82
+dicionario["Profissão"] = "Programador"
+
+print(dicionario)
+
+
+
+REMOVENDO UM CAMPO DO DICIONÁRIO
+dicionario = {
+    "Nome": "João",
+    "Idade": 25,
+    "Altura": 1.5,
+    "Casado": True,
+    "Notas": [1,2,3],
+    "Palavra_favorita": "Oi"
+}
+
+
+del dicionario["Palavra_favorita"]
+
+print(dicionario)
+
+
+
+CHECANDO SE UMA CHAVE EXISTE:
+dicionario = {
+    "Nome": "João",
+    "Idade": 25,
+    "Altura": 1.5,
+    "Casado": True,
+    "Notas": [1,2,3],
+    "Palavra_favorita": "Oi"
+}
+
+
+print("Altura" in dicionario)
+
+
+
+ATIVIDADE 3
+dicionario = {
+    "Nome": "João",
+    "Idade": 25,
+    "Altura": 1.5,
+    "Casado": True,
+    "Notas": [1,2,3],
+    "Palavra_favorita": "Oi"
+}
+
+chave = str(input("Digite o nome da chave: "))
+valor = str(input("Digite o valor da chave: "))
+
+
+dicionario[chave] = valor
+
+
+
+
+ATIVIDADE 4
+lista_de_alunos = [
+    {"Nome": "João", "Nota": 8},
+    {"Nome": "Maria", "Nota": 5},
+    {"Nome": "Francisco", "Nota": 10},
+    {"Nome": "Ana", "Nota": 3},
+    {"Nome": "Antônio", "Nota": 9},
+    {"Nome": "Fernanda", "Nota": 7}
+]
+
+soma_das_notas = 0
+
+for aluno in lista_de_alunos:
+    soma_das_notas += aluno["Nota"]
+
+media = soma_das_notas / len(lista_de_alunos)
+
+print(f"A média de todos os alunos é {media}")
+
+
+
+ATIVIDADE 4 ABORDAGEM DINÂNMICA
+lista_de_alunos = [
+    {
+        "Nome": str(input("Digite o nome do primeiro aluno: ")),
+        "Nota": float(input("Digite a primeira nota: "))
+    },
+    {
+        "Nome": str(input("Digite o nome do segundo aluno: ")),
+        "Nota": float(input("Digite a segunda nota: "))
+    },
+    {
+        "Nome": str(input("Digite o nome do terceiro aluno: ")),
+        "Nota": float(input("Digite a terceira nota: "))
+    },
+    {
+        "Nome": str(input("Digite o nome do quarto aluno: ")),
+        "Nota": float(input("Digite a quarta nota: "))
+    },
+    {
+        "Nome": str(input("Digite o nome do quinto aluno: ")),
+        "Nota": float(input("Digite a quinta nota: "))
+    },
+    {
+        "Nome": str(input("Digite o nome do sexto aluno: ")),
+        "Nota": float(input("Digite a sexta nota: "))
+    },
+    
+]
+
+soma_das_notas = 0
+
+for aluno in lista_de_alunos:
+    soma_das_notas += aluno["Nota"]
+
+media = soma_das_notas / len(lista_de_alunos)
+
+print(f"A média de todos os alunos é {media:.1f}")
+
+
+
+
+
+
+
+FUNÇÕES
+
+DECLARANDO FUNÇÕES
+def saudar(nome):
+    return f"Bem vindo(a) {nome}"
+
+print(saudar(nome="João"))
+print(saudar("Maria"))
+print(saudar(nome="Pedro"))
+print(saudar(nome="Abel"))
+
+
+
+
+CONDICIONAIS COM MULTIPLOS RETURNS, ORDEM DOS PARAMETROS
+
+def cumprimentar(nome, hora):
+    if(hora >= 5 and hora <= 12):
+        return f"Bom dia, {nome}"
+    elif(hora > 12 and hora <=18):
+        return f"Boa tarde, {nome}"
+    else:
+        return f"Boa noite, {nome}"
+    
+
+print(cumprimentar(nome="Will", hora=15))
+print(cumprimentar("Maria",21))
+print(cumprimentar(hora=21, nome="João"))
+
+
+
+
+
+USANDO O RETURN PARA CALCULAR ALGO
+def somar(n1,n2):
+    return n1 + n2
+
+
+media = somar(5,8) / 2
+    
+print(media)
+
+
+
+BOAS PRATICAS, TIPANDO AS VARIAVEIS
+
+def somar(n1:float, n2:float) -> float:
+    return n1 + n2
+
+def subtrair(n1:float, n2:float) -> str:
+    return f"A subtração deu: {n1 + n2}"
+
+media = somar(5,8) / 2
+    
+print(media)
+
+
+
+DEIXANDO VALORES PREDEFINIDOS
+def somar(n1:float = 8, n2:float = 10) -> float:
+    return n1 + n2
+
+media = somar(n2=6) / 2
+media2 = somar(n1=9) / 2
+    
+print(media)
+
+
+ATIVIDADE 1
+def saudar(nome:str) -> str:
+    return f"Olá, {nome}, seja bem vindo(a)"
+
+nome_digitado = str(input("Digite seu nome: "))
+
+print(saudar(nome=nome_digitado))
+
+
+
+def saudar():
+    nome = str(input("Digite seu nome: "))
+    return f"Olá, {nome}, seja bem vindo(a)"
+
+print(saudar())
+
+
+DESAFIO PRÁTICO
+Calculadora (Luiz Gonzaga)
+def adicao(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+def multiplicacao(a, b):
+    return a * b
+
+def divisao(a, b):
+    return a / b
+
+def calculadora():
+    operacao = input("Escolha uma operação (+, -, *, /): ")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+
+    if operacao == "+":
+        resultado = adicao(num1, num2)
+        print("O resultado da adição é:", resultado)
+    elif operacao == "-":
+        resultado = subtracao(num1, num2)
+        print("O resultado da subtração é:", resultado)
+    elif operacao == "*":
+        resultado = multiplicacao(num1, num2)
+        print("O resultado da multiplicação é:", resultado)
+    elif operacao == "/":
+        resultado = divisao(num1, num2)
+        print("O resultado da divisão é:", resultado)
+    else:
+        print("Operação inválida!")
+
+calculadora()
