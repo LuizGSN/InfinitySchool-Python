@@ -1,0 +1,195 @@
+def converter_temperatura(celsius):
+    f = celsius * 1.8 + 32
+    return f
+
+
+temperatura = float(input("Digite a temperatura em Celsius: "))
+
+
+print(converter_temperatura(celsius=temperatura))
+
+
+
+
+FAÇA UMA FUNÇÃO QUE RECEBE UMA LISTA DE NÚMEROS E RETORNA QUAL O MAIOR ENTRE ELES
+
+FAÇA UM PROGRAMA QUE PEDE PARA O USUÁRIO DIGITAR 5 NÚMEROS GUARDE ELES EM UMA LISTA E DEPOIS PASSE ESSA LISTA PARA A FUNÇÃO QUE VOCÊ CRIOU
+
+
+def encontrar_maior(lista_de_numeros):
+    maior_numero = lista_de_numeros[0]
+    for numero_atual in lista_de_numeros:
+        if numero_atual > maior_numero:
+            maior_numero = numero_atual
+    
+    return maior_numero
+
+
+lista = []
+for i in range(5):
+    numero = float(input("Digite um número: "))
+    lista.append(numero)
+
+print(encontrar_maior(lista))
+
+
+
+FAÇA UMA FUNÇÃO QUE RECEBE UMA LISTA DE NÚMEROS, CALCULA A MÉDIA ENTRE ELES E RETORNA A MÉDIA
+
+
+
+FAÇA UM PROGRAMA QUE PEDE PARA O USUÁRIO DIGITAR 4 NOTAS E GUARDA ELAS EM UMA LISTA E PASSA ESSA LISTA PARA A FUNÇÃO, GUARDANDO O SEU RESULTADO EM UMA VARIÁVEL
+
+DEPOIS CHEQUE SE O ALUNO FOI APROVADO OU REPROVADO (NOTA DE CORTE É 7)
+
+
+def calcular_media(lista_de_notas:list) -> float:
+    soma = 0
+    for nota_atual in lista_de_notas:
+        soma += nota_atual
+    media = soma / len(lista_de_notas)
+    return media
+
+
+lista_de_notas = []
+
+for i in range(4):
+    nota = float(input("Digite uma nota: "))
+    lista_de_notas.append(nota)
+
+media = calcular_media(lista_de_notas=lista_de_notas)
+
+
+if media >= 7:
+    print(f"Aprovado com a média {media}")
+else:
+    print(f"Reprovado com a média {media}")
+
+
+
+
+
+
+VERSÃO 2
+def calcular_media(lista_de_notas:list) -> float:
+    soma = 0
+    for nota_atual in lista_de_notas:
+        soma += nota_atual
+    media = soma / len(lista_de_notas)
+    return media
+
+
+def checar_aprovacao(media:float) -> str:
+    if media >= 7:
+        return f"Aprovado com a média {media}"
+    else:
+        return f"Reprovado com a média {media}"
+
+
+lista_de_notas = []
+
+for i in range(4):
+    nota = float(input("Digite uma nota: "))
+    lista_de_notas.append(nota)
+
+media = calcular_media(lista_de_notas=lista_de_notas)
+
+resposta = checar_aprovacao(media=media)
+
+print(resposta)
+
+
+
+args
+def somar(*todas_as_notas) -> float:
+    for nota_atual in todas_as_notas:
+        print(nota_atual)
+    
+
+somar(5,8,6,4,7,1)
+somar(10,6,1)
+
+
+
+
+kwargs
+def dados_pessoais(**pessoa):
+    print(pessoa)
+    for chave,valor in pessoa.items():
+        print(f"Chave: {chave} | Valor: {valor}")
+
+dados_pessoais(nome = "abel", idade = 28, altura = 1.9, casado = True)
+
+
+
+LAMBDA
+def saudar(nome_da_pessoa):
+    return f"Olá {nome_da_pessoa}"
+
+saudar2 = lambda nome : f"Olá {nome}"
+
+
+
+quadrado = lambda n : n**2
+
+print(quadrado(7))
+
+par = lambda n : n % 2 == 0
+
+print(par(6))
+print(par(7))
+
+maiusculo = lambda texto : texto.upper()
+
+print(maiusculo("abel"))
+
+
+if e else com lambda
+par_ou_impar = lambda n : "par" if n % 2 == 0 else "impar"
+
+def par_impar(numero):
+    if numero % 2 == 0:
+        return "par"
+    else:
+        return "impar"
+
+elif
+checa_numero = lambda n : "positivo" if n > 0 else "negativo" if n < 0 else "neutro"
+
+
+map
+lista_de_numero = [1,2,3,4,5]
+quadrado = list(map(lambda n : n ** 2, lista_de_numero))
+print(quadrado)
+
+lista_de_numero = [1,2,3,4,5]
+
+def elevar_quadrado (lista_de_numero):
+    lista = []
+    for numero in lista_de_numero:
+        lista.append(numero ** 2)
+    return lista
+
+quadrado = elevar_quadrado(lista_de_numero=lista_de_numero)
+
+print(quadrado)
+
+
+
+
+lista_de_numeros = [1,5,9,4,62,157,41,8]
+
+so_os_pares = list(filter(lambda n : n % 2 == 0, lista_de_numeros))
+
+print(so_os_pares)
+
+
+
+lista_de_numeros = [1,5,9,4,62,157,41,8]
+
+def filtrando(lista_de_numeros):
+    lista = []
+    for numero in lista_de_numeros:
+        if numero % 2 == 0:
+            lista.append(numero)
+    return lista
