@@ -1,0 +1,142 @@
+ATIVIDADE 1, REVISÃO DE LISTAS
+
+MODO RAIZ
+lista_de_numeros = []
+
+for i in range(6):
+    numero = float(input("Digite um número: "))
+    lista_de_numeros.append(numero)
+
+maior_numero = lista_de_numeros[0]
+
+for numero_atual in lista_de_numeros:
+    if numero_atual > maior_numero:
+        maior_numero = numero_atual
+
+print(f"O maior número digitado foi o {maior_numero}")
+
+
+MODO GAIATO
+lista_de_numeros = []
+
+for i in range(6):
+    numero = float(input("Digite um número: "))
+    lista_de_numeros.append(numero)
+
+
+lista_de_numeros.sort()
+maior_numero = lista_de_numeros[-1]
+
+print(f"O maior número digitado foi o {maior_numero}")
+
+
+MODO SUPER GAIATO
+lista_de_numeros = []
+
+for i in range(6):
+    numero = float(input("Digite um número: "))
+    lista_de_numeros.append(numero)
+
+
+lista_de_numeros.sort()
+maior_numero = lista_de_numeros[-1]
+
+print(f"O maior número digitado foi o {maior_numero}")
+
+
+
+ATIVIDADE 2, REVISÃO DE LISTAS
+
+primeira_lista = ["Maça", "Banana", "Pêra", "Jabuticaba", "Jambo"]
+segunda_lista = ["Limão", "Abacaxi", "Maça", "Melancia", "Banana", "Laranja"]
+
+intersecao_lista = []
+
+for fruta_atual in primeira_lista:
+    if fruta_atual in segunda_lista:
+        intersecao_lista.append(fruta_atual)
+
+print(intersecao_lista)
+
+
+
+
+
+ATIVIDADE 1
+frutas = set()
+
+frutas.add("Maça")
+frutas.add("Banana")
+frutas.add("Uva")
+frutas.add("Laranja")
+frutas.add("Uva")
+frutas.add("Morango")
+
+print(frutas)
+
+
+VERSÃO 2
+frutas = set()
+
+frutas.update(["Maça", "Banana", "Uva", "Laranja", "Morango"])
+
+print(frutas)
+
+
+
+ATIVIDADE 2
+frutas = set()
+
+frutas.update(["Maça", "Banana", "Uva", "Laranja", "Morango"])
+
+print(frutas)
+
+
+print("Banana" in frutas)
+
+
+
+ATIVIDADE 3
+frutas_vermelhas = {"Morango", "Cereja", "Framboesa"}
+
+print(frutas_vermelhas)
+
+
+
+ATIVIDADE 4
+frutas_vermelhas = {"Morango", "Cereja", "Framboesa"}
+
+frutas_vermelhas.discard("Cereja")
+
+print(frutas_vermelhas)
+
+
+ATIVIDADE 5
+alunos = {"João", "Maria", "Pedro", "Ana"}
+professores = {"Abel", "Diego", "João", "Patrícia"}
+
+print(alunos.union(professores))
+
+
+ATIVIDADE 6
+alunos = {"João", "Maria", "Pedro", "Ana"}
+professores = {"Abel", "Diego", "João", "Patrícia"}
+
+print(alunos.intersection(professores))
+
+
+ATIVIDADE 7 TUNADA
+DADO AS LISTAS:
+LISTA1 = [10,6,8,15,29,33,4,11,50]
+LISTA2 =  [41,25,4,29,1,63,15]
+MOSTRE NA TELA A SOMA DOS NÚMEROS QUE ESTÃO CONTIDOS NAS DUAS LISTAS AO MESMO TEMPO (USE SET PARA AJUDAR NA INTERSEÇÃO)
+
+lista1 = [10,6,8,15,29,33,4,11,50]
+lista2 = [41,25,4,29,1,63,15]
+
+conjunto_novo = set(lista1).intersection(lista2)
+
+soma = 0
+for item_da_vez in conjunto_novo:
+    soma += item_da_vez
+print(soma)
